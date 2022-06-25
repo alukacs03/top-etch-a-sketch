@@ -1,6 +1,6 @@
 * {
-    border: 1px solid lightgray;
     box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace
 }
 
 html, body {
@@ -24,6 +24,7 @@ html, body {
 
 .grid-element {
     background-color: white;
+    border: 1px solid lightgray;
 }
 
 .etcha {
@@ -32,4 +33,12 @@ html, body {
     height: 500px;
     background-color: var(--secondary-light);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.settingsdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
 }

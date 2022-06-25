@@ -1,0 +1,35 @@
+* {
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainframe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.etchadiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-element {
+    background-color: white;
+}
+
+.etcha {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: var(--secondary-light);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

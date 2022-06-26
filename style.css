@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: "MS Sans Serif",Tahoma,Verdana,Segoe,sans-serif; 
+    border: 1px solid red;
 }
 
 html, body {
@@ -78,6 +79,8 @@ html, body {
 .icon {
     display: flex;
     align-self: flex-start;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .hidden {

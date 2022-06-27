@@ -11,6 +11,19 @@ html, body {
     background-color: teal;
 }
 
+.bordered, button, .gridSizeSlider::-webkit-slider-thumb{
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-right-color: #424242;
+    border-bottom-color: #424242;
+    background-color: silver;
+}
+
+/* ------------------------- */
+/* ---- HEADER SETTINGS ---- */
+/* ------------------------- */
+
 .titlediv {
     display: flex;
     margin: 0;
@@ -19,11 +32,6 @@ html, body {
     padding: 0px;
     background-color: silver;
     padding: 20px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-bottom-color: #424242;
-    background-color: silver;
     width: 100%;
     height: 50px;
     overflow: hidden;
@@ -48,42 +56,18 @@ html, body {
     padding: 10px;
 }
 
-.mainframe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.etchadiv {
-    display: flex;
-    flex-direction: column;
-}
-
-.topbar {
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 3px;
-    background-color: silver;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-bottom: 0;
-    border-style: outset;
-    background-color: silver;
-    min-width: 550px;
-    max-width: 1200px;
-}
+/* ------------------------- */
+/* ----- ICON SETTINGS ----- */
+/* ------------------------- */
 
 .icon {
+    position: fixed;
+    z-index: 0;
+    top: 65px;
     display: flex;
     align-self: flex-start;
     justify-content: center;
     margin-bottom: 20px;
-}
-
-.hidden {
-    opacity: 0;
 }
 
 .etchasketchicon {
@@ -98,6 +82,48 @@ html, body {
 .etchasketchicon img {
     width: 50px;
     margin-bottom: 5px;
+}
+
+/* ------------------------- */
+/* -- ETCHASKETCHSETTINGS -- */
+/* ------------------------- */
+
+.mainframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.etchadiv {
+    z-index: 1; /* used so that when the screen is smaller, the icon stays behind the main program */
+    display: flex;
+    flex-direction: column;
+}
+
+.settingsdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 20px;
+    width: 300px;
+}
+
+.topbar {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 3px;
+    background-color: silver;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 0;
+    border-style: outset;
+    background-color: silver;
+    min-width: 550px;
+    max-width: 1200px;
 }
 
 .topbarinside {
@@ -135,10 +161,6 @@ html, body {
     border: 1px solid lightgray;
 }
 
-.unbordered {
-    border: 0;
-}
-
 .etcha {
     display: grid;
     width: 500px;
@@ -147,30 +169,15 @@ html, body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.settingsdiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
+.etchabg {
     padding: 20px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-right-color: #424242;
-    border-bottom-color: #424242;
-    background-color: silver;
-    width: 300px;
 }
 
+/* ------------------------- */
+/* ---- BUTTON SETTINGS ---- */
+/* ------------------------- */
+
 button {
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-right-color: #424242;
-    border-bottom-color: #424242;
-    background: silver;
-    color: black;
     padding: 5px 5px 5px;
     border-radius: 1px;
 }
@@ -190,16 +197,6 @@ button:active {
     outline: 0 !important;
 }
 
-.etchabg {
-    padding: 20px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-right-color: #424242;
-    border-bottom-color: #424242;
-    background-color: silver;
-}
-
 .exitbuttons {
     display: flex;
 }
@@ -211,12 +208,6 @@ button:active {
     font-weight: 900;
     height: 30px;
     width: 30px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-right-color: #424242;
-    border-bottom-color: #424242;
-    background-color: silver;
     user-select: none;
 }
 
@@ -227,24 +218,9 @@ button:active {
     box-shadow: -1px -1px #000;
 }
 
-input[type="color"] {
-    -webkit-appearance: none;
-	border: none;
-	width: 50px;
-	height: 50px;
-}
-
-input[type="color"]::-webkit-color-swatch-wrapper {
-	padding: 0;
-}
-input[type="color"]::-webkit-color-swatch {
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-right-color: #424242;
-    border-bottom-color: #424242;
-    background-color: silver;
-}
+/* ------------------------- */
+/* ----- FOOTERSETTINGS -----*/
+/* ------------------------- */
 
 .authordiv {
     height: 40px;
@@ -259,6 +235,39 @@ input[type="color"]::-webkit-color-swatch {
     width: 100%;
 }
 
+.authordiv a {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+/* ------------------------- */
+/* -- COLORPICKERSETTINGS -- */
+/* ------------------------- */
+
+input[type="color"] {
+    -webkit-appearance: none;
+	border: none;
+	width: 50px;
+	height: 50px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border-width: 1px;
+    border-color: buttonface;
+    border-right-color: #424242;
+    border-bottom-color: #424242;
+    background-color: silver;
+}
+
+/* ------------------------- */
+/* GRID SIZE SLIDER SETTINGS */
+/* ------------------------- */
+
 .gridSizeSlider {
     -webkit-appearance: none; 
     appearance: none;
@@ -266,7 +275,7 @@ input[type="color"]::-webkit-color-swatch {
     height: 2px;
     background: #000000; 
     opacity: 0.7;
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    -webkit-transition: .2s;
     transition: opacity .2s;
 }
 
@@ -274,34 +283,22 @@ input[type="color"]::-webkit-color-swatch {
     opacity: 1; 
   }
   
-  .gridSizeSlider::-webkit-slider-thumb {
+.gridSizeSlider::-webkit-slider-thumb {
     -webkit-appearance: none; 
     appearance: none;
     width: 15px; 
     height: 25px; 
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-right-color: #424242;
-    border-bottom-color: #424242;
-    background-color: silver;
     cursor: pointer;
-  }
+}
   
-  .gridSizeSlider::-moz-range-thumb {
+.gridSizeSlider::-moz-range-thumb {
     width: 15px; 
     height: 25px; 
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-right-color: #424242;
-    border-bottom-color: #424242;
-    background-color: silver;
     cursor: pointer;
-  }
+}
 
-  .authordiv a {
-      font-size: 12px;
-      text-decoration: none;
-      color: black;
-  }
+/* Class used to hide the borders when "Toggle Grid" is pressed. */
+
+.grid-element.unbordered {
+    border: 0;
+}

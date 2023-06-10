@@ -2,6 +2,7 @@
 The Odin Project Etch a Sketch
 
 This project is a very simple Etch-a-Sketch game made using vanilla JavaScript, CSS and HTML.
+It can be accessed and played with here: https://lukiakos.github.io/top-etch-a-sketch/
 I followed the instructions of The Odin Project (https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
 
 I styled the site to look like Windows 95. 
